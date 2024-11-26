@@ -75,3 +75,9 @@ window.addEventListener('resize', () => {
     }
     drawDots();
 })
+
+let btn = document.querySelector('.btn');
+
+btn.addEventListener('click', () => {
+    window.open("#", "_blank");
+});
