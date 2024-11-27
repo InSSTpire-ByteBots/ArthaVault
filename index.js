@@ -10,8 +10,6 @@ document.onmousedown=killCopy
 document.onclick=reEnable
 }
 
-
-
 let banner = document.querySelector('.banner');
 let canvas = document.getElementById('dotsCanvas');
 canvas.width = canvas.offsetWidth;
