@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const graph = document.querySelector('#myPieChart').getContext('2d');
     const data = {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Food', 'Travel', 'Household', 'Health', 'Education', 'Others'],
         datasets: [{
           label: 'Colors Distribution',
           data: [12, 19, 3, 5, 2, 20], // Data values
