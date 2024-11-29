@@ -24,3 +24,43 @@ document.addEventListener("DOMContentLoaded", function () {
       new Chart(graph,config);
 
 })
+
+// Checking if the user is signed in or not
+
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAh391JmV8sMQMsG4GM-d5YYDW9B2Wm02Q",
+  authDomain: "student-stake.firebaseapp.com",
+  projectId: "student-stake",
+  storageBucket: "student-stake.firebasestorage.app",
+  messagingSenderId: "30261368491",
+  appId: "1:30261368491:web:15cfe37fda0a38620489ee",
+  measurementId: "G-D7WLWT2CFH"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  onAuthStateChanged(auth, (user) => {
+    if (!user) {
+
+      window.location.href = '../index.html';
+    } else {
+      console.log('Logged in user:', user.email);
+    }
+  });
+});
+
+const signOut = document.getElementById('logout');
+
+signOut.addEventListener('click', async () => {
+  await auth.signOut();
+  window.location.href = "../index.html";
+  console.log('User signed out')
+});

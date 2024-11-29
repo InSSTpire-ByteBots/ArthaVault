@@ -77,8 +77,49 @@ window.addEventListener('resize', () => {
 })
 
 //Register button
-let btn = document.querySelector('.btn');
 
-btn.addEventListener('click', () => {
-    window.open("#", "_blank");
-});
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut,onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyA11hgk-Jvh52K49nnvvi5NmXwXhyh0SuI",
+    authDomain: "arthavault.firebaseapp.com",
+    databaseURL: "https://arthavault-default-rtdb.firebaseio.com",
+    projectId: "arthavault",
+    storageBucket: "arthavault.firebasestorage.app",
+    messagingSenderId: "1083248966716",
+    appId: "1:1083248966716:web:eab34f24a63b6630d49739",
+    measurementId: "G-SBL20CEHEB"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  
+  const auth = getAuth();
+  const provider = new GoogleAuthProvider();
+  
+//   const login = document.getElementById("login");
+  const register = document.getElementById("register");
+  
+  const userSignIn = async() => {
+    signInWithPopup(auth, provider)
+    .then((result) => {
+        const user = result.user;
+        console.log("User signed in:", user);
+        window.location.href = "dashboard/dashboard.html";
+    }).catch((error) => {
+        console.log(error.message);
+      })
+  };
+  
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      console.log("User is signed in:", user);
+    } else {
+      console.log("User is signed out");
+    }
+  });
+  
+//   login.addEventListener('click', userSignIn);
+  register.addEventListener('click', userSignIn);
