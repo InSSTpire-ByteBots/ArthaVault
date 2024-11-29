@@ -32,14 +32,14 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebas
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAh391JmV8sMQMsG4GM-d5YYDW9B2Wm02Q",
-  authDomain: "student-stake.firebaseapp.com",
-  projectId: "student-stake",
-  storageBucket: "student-stake.firebasestorage.app",
-  messagingSenderId: "30261368491",
-  appId: "1:30261368491:web:15cfe37fda0a38620489ee",
-  measurementId: "G-D7WLWT2CFH"
-};
+    apiKey: "AIzaSyA11hgk-Jvh52K49nnvvi5NmXwXhyh0SuI",
+    authDomain: "arthavault.firebaseapp.com",
+    projectId: "arthavault",
+    storageBucket: "arthavault.firebasestorage.app",
+    messagingSenderId: "1083248966716",
+    appId: "1:1083248966716:web:eab34f24a63b6630d49739",
+    measurementId: "G-SBL20CEHEB"
+  };
 
 
 const app = initializeApp(firebaseConfig);

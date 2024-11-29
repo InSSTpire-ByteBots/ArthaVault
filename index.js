@@ -107,7 +107,7 @@ const firebaseConfig = {
     .then((result) => {
         const user = result.user;
         console.log("User signed in:", user);
-        window.location.href = "dashboard/dashboard.html";
+        window.location.href = "dashboard/dashboard.html"; 
     }).catch((error) => {
         console.log(error.message);
       })
