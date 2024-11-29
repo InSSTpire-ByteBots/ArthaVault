@@ -103,8 +103,8 @@ h1{
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
     line-height: 1em;
-
 }
+
 h1.right{
     --to: right;
 }
