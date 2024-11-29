@@ -1,0 +1,114 @@
+html, body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0%;
+}
+main{
+    width: 100%;
+    height: 90vh;
+    margin: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.chart{
+    width: 50%;
+    height: 50%;
+    
+}
+body{
+    color: #eee;
+    font-family: Poppins;
+    margin: 0;
+    background-image:
+    /* repeating-linear-gradient(
+        to right, #2d2a44 0 1px, transparent 2px 200px
+    ), */
+    /* repeating-linear-gradient(
+        to bottom, #2d2a44 0 1px, transparent 2px 200px
+    ), */
+    radial-gradient(
+        at 50% 50%, #2d2a44, #1d1b34 
+    );
+}
+header img{
+    width: 150px;
+}
+header{
+    width: min(1200px, 90vw);
+    margin: auto;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav ul{
+    display: flex;
+    gap: 30px;
+}
+nav>button{
+    background: none;
+    border: none;
+    font-size: medium;
+    font-weight: 700;
+    border-radius: 6px;
+    margin:0px;
+    /* padding: 4px; */
+    border: 1px,solid,#b302ff;
+    transition-duration: 250ms;
+}
+nav>button>p{
+    --to: left;
+    background-image: linear-gradient(
+        to var(--to), #89a5df, #e46e7f, #e8e191
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;;
+}
+nav>button:hover{
+    border: 3px,solid,#b302ff;
+    box-shadow:3px 2px 15px #b302ff;
+    transform: scale(1.1);
+    transform: translateY(10px);
+    transition-duration: 250ms;
+}
+ul{
+    
+}
+.heading{
+
+}
+.search{
+    
+    width: 80vh;
+    background-color: white;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    
+}
+.search:hover{
+    border: 3px,solid,#b302ff;
+    box-shadow:3px 2px 15px #b302ff;
+}
+
+.search>input{
+    font-size: medium;
+    margin: 8px 17px;
+    width: 73vh;
+    border: none;
+    outline: none;
+}
+.links {
+    color: #eee;
+    transition: 0.5s;
+}
+
+.links:hover {
+    color: #c691e6;
+    cursor: pointer;
+}
