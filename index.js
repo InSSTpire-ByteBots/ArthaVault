@@ -1,4 +1,4 @@
-
+// Disable copying in the website
 function killCopy(e){
     return false
     }
@@ -11,6 +11,7 @@ document.onmousedown=killCopy
 document.onclick=reEnable
 }
 
+// Random dot web stucture
 let banner = document.querySelector('.banner');
 let canvas = document.getElementById('dotsCanvas');
 canvas.width = canvas.offsetWidth;
@@ -18,7 +19,7 @@ canvas.height = canvas.offsetHeight;
 const ctx = canvas.getContext('2d');
 const dots = [];
 const arrayColors = ['#eee', '#545454', '#596d91', '#bb5a68', '#696541'];
-for (let index = 0; index < 50; index++) {
+for (let index = 0; index < 35; index++) {
     dots.push({
         x:  Math.floor(Math.random() * canvas.width),
         y:  Math.floor(Math.random() * canvas.height),
@@ -64,7 +65,7 @@ window.addEventListener('resize', () => {
     canvas.height = banner.offsetHeight;
 
     dots = [];
-    for (let index = 0; index < 50; index++) {
+    for (let index = 0; index < 35; index++) {
         dots.push({
             x:  Math.floor(Math.random() * canvas.width),
             y:  Math.floor(Math.random() * canvas.height),
@@ -75,6 +76,7 @@ window.addEventListener('resize', () => {
     drawDots();
 })
 
+//Register button
 let btn = document.querySelector('.btn');
 
 btn.addEventListener('click', () => {
