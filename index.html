@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="index.css">
     <script src="database.js" type="module"></script>
 </head>
+
 <body>
     <header>
         <figure>
@@ -14,30 +16,38 @@
         </figure>
         <nav>
             <ul>
-                <li><a href="#" class = "links">Home</a></li>
-                <li><a href="#" class = "links">About us</a></li>
-                <li><a href="#" class = "links">Contact us</a></li>
+                <li><a href="#home" class="links">Home</a></li>
+                <li><a href="#about" class="links">About us</a></li>
+                <li><a href="#contact" class="links">Contact us</a></li>
             </ul>
         </nav>
     </header>
-    <main>
+    <section class="home" id="home">
         <div class="banner">
             <h5>@ByteBots</h5>
             <div>
-                <h1 class="left" id = "hin">अर्थ Vault</h1>
+                <h1 class="left" id="hin">अर्थ Vault</h1>
                 <h1 class="right">Finance Manager</h1>
             </div>
             <h4>
                 Make each of your penny count
                 <br>with our finance manager
             </h4>
-            <button class="btn">Register Now &#8599</button>
+            <button class="btn" id = "register">Register Now &#8599</button>
 
             <canvas id="dotsCanvas"></canvas>
         </div>
-    </main>    
+    </section>
 
+    <section class="about" id="about">
+        <h1>About Us</h1>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1>Contact Us</h1>
+    </section>
 
     <script src="index.js" type="module"></script>
 </body>
+
 </html>
