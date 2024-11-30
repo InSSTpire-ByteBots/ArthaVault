@@ -1,121 +1,166 @@
-html, body{
-    width: 100%;
-    height: 100%;
-    margin: 0%;
+* {
+  text-decoration: none;
+  list-style: none;
 }
+
+html, body{
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  font-size: 1.2 rem;
+}
+
 main{
-    width: 100%;
-    height: 100%;
-    margin: 0%;
+  width: 100%;
+  height: 100%;
+  margin: 0%;
 }
 .chart{
-    width: 50%;
-    height: 50%;
-    
+ 
+  width: 35%;
+  height: 35%;
+  padding:  30px;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 body{
-    color: #eee;
-    font-family: Poppins;
-    margin: 0;
-    background-image:
-    /* repeating-linear-gradient(
-        to right, #2d2a44 0 1px, transparent 2px 200px
-    ), */
-    /* repeating-linear-gradient(
-        to bottom, #2d2a44 0 1px, transparent 2px 200px
-    ), */
-    radial-gradient(
-        at 50% 50%, #2d2a44, #1d1b34 
-    );
+  color: #eee;
+  font-family: Poppins;
+  margin: 0;
+  background-image:
+  /* repeating-linear-gradient(
+      to right, #2d2a44 0 1px, transparent 2px 200px
+  ), */
+  /* repeating-linear-gradient(
+      to bottom, #2d2a44 0 1px, transparent 2px 200px
+  ), */
+  radial-gradient(
+      at 50% 50%, #2d2a44, #1d1b34 
+  );
 }
 header img{
-    width: 150px;
+  width: 150px;
 }
 header{
-    width: min(1200px, 90vw);
-    margin: auto;
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: min(1200px, 90vw);
+  margin: auto;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 header nav ul{
-    display: flex;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .links {
-    color: #eee;
-    transition: 0.5s;
+  color: #eee;
+  transition: 0.5s;
 }
 
 .links:hover {
-    color: #c691e6;
-    cursor: pointer;
+  color: #c691e6;
+  cursor: pointer;
 }
 
 
 
 main{
-   display: flex;
-   width: 100%;
-   height: 100vh; /* Example height */
- }
- .sidebar{
-   flex: 2; /* 2 parts of the total ratio */
-   background-color: lightblue;
- }
- .box{
-   flex: 7; /* 3 parts of the total ratio */
-   background-color: lightcoral;
- }
- .items{
-   
-   margin-top: 20px;
-   
- }
+ display: flex;
+ width: 100%;
+ height: 100vh; /* Example height */
+}
+.sidebar{
+ flex: 2; /* 2 parts of the total ratio */
+ background-image:radial-gradient(
+  at 40% 70%, rgb(97, 0, 97)  , black
+); ;
+}
+.box{
+ flex: 7; /* 3 parts of the total ratio */
+ background-image:radial-gradient(
+  at 40% 70%,  rgb(86, 0, 86), #1d1b34 
+); ;
+}
+.items{
  
- a{
-   text-decoration: none;
- }
+ margin-top: 50px;
+ color: black;
 
- .inc{
-  
-   display: flex;
-   justify-content: space-around;
-   padding: 5px;
-   
- }
- .inc_{
-   text-align: center;
-   flex: 3;
-   background-color: #1d1b34;
-   border-radius: 20px;
-   margin: 10px;
-  
- }
+ 
+}
 
- .select-container {
-   margin-left: 10px;
-   width: 200px;
-   position: relative;
- }
+a{
+ text-decoration: none;
+ color: white;
+ /* font-size: x-large; */
+ 
 
- /* Style the select element */
- select {
-   width: 100%;
-   padding: 10px;
-   font-size: 16px;
-   border: 1px solid #000000;
-   border-radius: 5px;
-   appearance: none; /* Remove default arrow styling */
-   background: rgb(164, 236, 236) url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="black" d="M2 0L0 2h4z"/></svg>') no-repeat right 10px center;
-   background-size: 10px;
-   cursor: pointer;
-   font-family: Poppins;
- }
+ 
+}
+a:hover{
+color: aqua;
+}
 
- /* Option styles (optional, mainly browser-defined) */
- option {
-   padding: 10px;
- }
+.inc{
+
+ display: flex;
+ justify-content: space-around;
+ padding: 5px;
+ 
+}
+.inc_{
+ text-align: center;
+ flex: 3;
+ background-color: #1d1b34;
+ border-radius: 20px;
+ margin: 10px;
+
+}
+
+.select-container {
+ margin-left: 120px;
+ width: 200px;
+ position: relative;
+}
+
+/* Style the select element */
+select {
+ width: 100%;
+ padding: 10px;
+ font-size: 16px;
+ border: 1px solid #000000;
+ border-radius: 5px;
+ appearance: none; /* Remove default arrow styling */
+ background: rgb(209, 166, 255) url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="black" d="M2 0L0 2h4z"/></svg>') no-repeat right 10px center;
+ background-size: 10px;
+ cursor: pointer;
+ font-family: Poppins;
+ color:  black;
+}
+
+/* Option styles (optional, mainly browser-defined) */
+option {
+ padding: 10px;
+ 
+}
+
+.information{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ 
+}
+
+.list{
+margin-top: 40px;
+font-size: x-large;
+}
+
+.category{
+ display: flex;
+ gap : 20px;
+}
+
