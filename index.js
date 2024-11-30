@@ -17,7 +17,7 @@ let canvas = document.getElementById('dotsCanvas');
 canvas.width = canvas.offsetWidth;
 canvas.height = canvas.offsetHeight;
 const ctx = canvas.getContext('2d');
-const dots = [];
+let dots = [];
 const arrayColors = ['#eee', '#545454', '#596d91', '#bb5a68', '#696541'];
 for (let index = 0; index < 35; index++) {
     dots.push({
