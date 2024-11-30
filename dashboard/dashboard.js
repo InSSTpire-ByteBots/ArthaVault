@@ -47,18 +47,18 @@ const auth = getAuth();
 
 document.addEventListener('DOMContentLoaded', () => {
   onAuthStateChanged(auth, (user) => {
-    if (!user) {
-      window.location.href = '../index.html';
-    } else {
+    if (user) {
       console.log('Logged in user:', user.email);
+    } else {
+      window.location.href = '../index.html';
     }
   });
 });
 
-const signOut = document.getElementById('logout');
+// const signOut = document.getElementById('logout');
 
-signOut.addEventListener('click', async () => {
-  await auth.signOut();
-  window.location.href = "../index.html";
-  console.log('User signed out')
-});
+// signOut.addEventListener('click', async () => {
+//   await auth.signOut();
+//   window.location.href = "../index.html";
+//   console.log('User signed out')
+// });
