@@ -83,15 +83,14 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, signOut,onAuthStateChange
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA11hgk-Jvh52K49nnvvi5NmXwXhyh0SuI",
-    authDomain: "arthavault.firebaseapp.com",
-    databaseURL: "https://arthavault-default-rtdb.firebaseio.com",
-    projectId: "arthavault",
+    apiKey: "AIzaSyAh391JmV8sMQMsG4GM-d5YYDW9B2Wm02Q",
+    authDomain: "student-stake.firebaseapp.com",
+    projectId: "student-stake",
     storageBucket: "arthavault.firebasestorage.app",
     messagingSenderId: "1083248966716",
     appId: "1:1083248966716:web:eab34f24a63b6630d49739",
     measurementId: "G-SBL20CEHEB"
-  };
+};
 
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
