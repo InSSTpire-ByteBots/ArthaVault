@@ -1,8 +1,8 @@
 function calculateSIP() {
   
-     const monthlyInvestment = parseFloat(document.getElementById("monthlyInvestment").value);
-     const expectedReturn = parseFloat(document.getElementById("expectedReturn").value) / 100;
-     const investmentPeriod = parseInt(document.getElementById("investmentPeriod").value);
+     const monthlyInvestment = parseFloat(document.getElementById("monthlyInvest").value);
+     const expectedReturn = parseFloat(document.getElementById("expected").value) / 100;
+     const investmentPeriod = parseInt(document.getElementById("Period").value);
    
      
      let futureValue = 0;
@@ -13,12 +13,12 @@ function calculateSIP() {
      let investedAmt = monthlyInvestment * 12 * investmentPeriod;
      let estReturns = futureValue - investedAmt;
    
-     document.getElementById("inv").textContent = "Invested Amount for " + investmentPeriod + " years: ₹" + investedAmt.toFixed(2);
-     document.getElementById("ret").textContent = "Est. Returns " + ": ₹" + estRturns.toFixed(2);
+     document.getElementById("x").textContent = "Invested Amount for " + investmentPeriod + " years: ₹" + investedAmt.toFixed(2);
+     document.getElementById("y").textContent = "Est. Returns " + ": ₹" + estReturns.toFixed(2);
      
    
      
-     document.getElementById("result").textContent = "Your estimated corpus after " + investmentPeriod + " years: ₹" + futureValue.toFixed(2);
+     document.getElementById("z").textContent = "Your estimated corpus after " + investmentPeriod + " years: ₹" + futureValue.toFixed(2);
      }
    
      function calculateLumpSum() {
