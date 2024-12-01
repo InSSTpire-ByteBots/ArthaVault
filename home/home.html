@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="home.css" />
+    
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="../images/logo.png" />
+        </figure>
+        <nav>
+            
+            <button class="btn">अर्थ Assistant &#8599</button>
+        </nav>
+    </header>
+    <main>
+        <div class="fin">
+            <div class="total">
+                <p>Total Income:</p>
+                <p class="income">$4000</p>
+            </div>
+            <div class="left">
+                <p>Remaining:</p>
+                <p class="remaining">$1500</p>
+            </div>
+        </div> 
+        
+        <div class="data">
+            <div class="info">
+                <div class="dropdowns">
+                    <select id="year">
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <!-- Add more years as needed -->
+                    </select>
+                    <select id="month">
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                </div>
+                <div class="list">
+                    <div class="category">
+                        <p>Food -</p>
+                        <p id="food">$500</p>
+                    </div>
+                    <div class="category">
+                        <p>Travel -</p>
+                        <p id="travel">$500</p>
+                    </div>
+                    <div class="category">
+                        <p>Household -</p>
+                        <p id="houshold">$500</p>
+                    </div>
+                    <div class="category">
+                        <p>Health -</p>
+                        <p id="health">$2500</p>
+                    </div>
+                    <div class="category">
+                        <p>Education -</p>
+                        <p id="education">$1500</p>
+                    </div>
+                    <div class="category">
+                        <p>Others -</p>
+                        <p id="others">$700</p>
+                    </div>
+                </div>
+            </div>
+                <div class="pie">
+                    <canvas id="myPieChart"></canvas>
+                </div>
+            
+        </div>
+        
+    </main>
+    <script src="home.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </body>
+</html>
