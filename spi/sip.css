@@ -1,48 +1,88 @@
-body{
-     color: #eee;
-     font-family: Poppins;
-     margin: 0;
-     background-image:
-     repeating-linear-gradient(
-         to right, #2d2a44 0 1px, transparent 2px 200px
-     ), 
-      repeating-linear-gradient(
-         to bottom, #2d2a44 0 1px, transparent 2px 200px
-     ), 
-     radial-gradient(
-         at 50% 50%, #2d2a44, #1d1b34 
-     );
-   }
-   header img{
-     width: 150px;
-   }
-   header{
-     width: min(1200px, 90vw);
-     margin: auto;
-     height: 70px;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-   }
-   header nav ul{
-     display: flex;
-     gap: 30px;
-   }
-   
-   .links {
-     color: #eee;
-     transition: 0.5s;
-   }
-   
-   .links:hover {
-     color: #c691e6;
-     cursor: pointer;
-   }
+* {
+  font-size: 1.2 rem;
+}
 
-   #container{
-     margin: 20px;
-     display: flex;
-     justify-content: center;
-     justify-content: space-around;
+body {
+  color: #eee;
+  font-family: Poppins;
+  margin: 0;
+  background-image: repeating-linear-gradient(
+      to right,
+      #2d2a44 0 1px,
+      transparent 2px 200px
+    ),
+    repeating-linear-gradient(to bottom, #2d2a44 0 1px, transparent 2px 200px),
+    radial-gradient(at 50% 50%, #2d2a44, #1d1b34);
+}
+header img {
+  width: 150px;
+}
+header {
+  width: min(1200px, 90vw);
+  margin: auto;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+header nav ul {
+  display: flex;
+  gap: 30px;
+}
 
-   }
+.links {
+  color: #eee;
+  transition: 0.5s;
+}
+
+.links:hover {
+  color: #c691e6;
+  cursor: pointer;
+}
+
+#container {
+  width: 90%;
+  height: 600px;
+  border: 1px solid grey;
+  border-radius: 35px;
+  background: transparent;
+  background-color: rgba(45,42,68,0.5);
+}
+
+#lump {
+  display: none;
+}
+
+#SIP {
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+main {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+
+input {
+  width: 200px;
+  border-radius: 35px;
+  background-color: #1d1b34;
+  color: whitesmoke;
+}
+
+.but {
+  height: 50px;
+  border-radius: 25px;
+  width: 50px;
+  border: 200 px whitesmoke;
+  background-color: #1d1b34;
+  color: whitesmoke;
+}
+
+.cal {
+  width: 150px;
+}

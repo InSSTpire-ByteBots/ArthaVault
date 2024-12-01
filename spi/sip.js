@@ -18,7 +18,7 @@ function calculateSIP() {
      
    
      
-     document.getElementById("z").textContent = "Your estimated corpus after " + investmentPeriod + " years: ₹" + futureValue.toFixed(2);
+     document.getElementById("z").textContent = "Your estimated corpus after " + investmentPeriod + " years: ₹ " + futureValue.toFixed(2);
      }
    
      function calculateLumpSum() {
@@ -34,9 +34,17 @@ function calculateSIP() {
           let estReturns = futureValue - investedAmt;
         
           document.getElementById("inv").textContent = "Invested Amount for " + investmentPeriod + " years: ₹" + investedAmt.toFixed(2);
-          document.getElementById("ret").textContent = "Est. Returns " + ": ₹" + estReturns.toFixed(2);
+          document.getElementById("ret").textContent = "Est. Returns " + ": ₹ " + estReturns.toFixed(2);
         
           
-          document.getElementById("result").textContent = "Your estimated corpus after " + investmentPeriod + " years: ₹" + futureValue.toFixed(2);
+          document.getElementById("result").textContent = "Your estimated corpus after " + investmentPeriod + " years: ₹ " + futureValue.toFixed(2);
         }
         
+       function ShowSIP(){
+           document.getElementById("lump").style.display = "none";
+           document.getElementById("SIP").style.display = "block";
+       }
+       function ShowLumpSum(){
+           document.getElementById("SIP").style.display = "none";
+           document.getElementById("lump").style.display = "block";
+       }
