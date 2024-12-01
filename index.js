@@ -17,7 +17,7 @@ let canvas = document.getElementById('dotsCanvas');
 canvas.width = canvas.offsetWidth;
 canvas.height = canvas.offsetHeight;
 const ctx = canvas.getContext('2d');
-const dots = [];
+let dots = [];
 const arrayColors = ['#eee', '#545454', '#596d91', '#bb5a68', '#696541'];
 for (let index = 0; index < 35; index++) {
     dots.push({
@@ -85,13 +85,12 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase
 const firebaseConfig = {
     apiKey: "AIzaSyA11hgk-Jvh52K49nnvvi5NmXwXhyh0SuI",
     authDomain: "arthavault.firebaseapp.com",
-    databaseURL: "https://arthavault-default-rtdb.firebaseio.com",
     projectId: "arthavault",
     storageBucket: "arthavault.firebasestorage.app",
     messagingSenderId: "1083248966716",
     appId: "1:1083248966716:web:eab34f24a63b6630d49739",
     measurementId: "G-SBL20CEHEB"
-  };
+};
 
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
