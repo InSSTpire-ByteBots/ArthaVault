@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="arthaGpt.css" />
-
+    <link href="https://fonts.cdnfonts.com/css/samarkan" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>@import url('https://fonts.cdnfonts.com/css/samarkan');</style>
     <title>Document</title>
   </head>
   <body>
@@ -19,12 +21,23 @@
     </header>
     <main>
       <div class="heading">
-        ArthaGPT
+        <p>अर्थ </p><p id="gpt"> GPT</p>
       </div>
-      <div class ="search">
-          <input type="text" name="" id="" placeholder="Type your question">
+      <div class="search">
+      <div class ="searchBar">
+          <input type="text" name="" id="question" placeholder="Type your question">
+      </div>
+      <div id="submit">
+      <i class="fa-solid fa-arrow-up fa-lg" ></i>
+    </div>
+    </div>
+      <div class="response">
       </div>
     </main>
-    <script src="dashboard.js"></script>
+    <div class="loader">
+      
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="arthaGpt.js"></script>
   </body>
 </html>
