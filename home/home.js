@@ -1,3 +1,10 @@
+let btn = document.querySelector('.btn');
+window.onload = function () {
+  btn.onclick = function () {
+    window.location.href = '../arthaGpt/arthaGpt.html';
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const graph = document.querySelector('#myPieChart').getContext('2d');
   const data = {
