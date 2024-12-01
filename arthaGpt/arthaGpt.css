@@ -67,14 +67,25 @@ header nav ul{
     box-shadow: 0 0 50px #c691e6;
     font-size: 1.2rem;
 }
-
-ul{
-    
-}
 .heading{
-
+    display: flex;
+    gap: 20px;
+}
+.heading>p{
+    margin: 0%;
+    font-size: 50px;
+    font-weight:400;
+}
+#gpt{
+    font-family: 'Samarkan', sans-serif;
 }
 .search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.searchBar{
     
     width: 80vh;
     background-color: white;
@@ -85,18 +96,35 @@ ul{
     transition: 0.5s smooth;
     
 }
-.search:hover{
+.searchBar:hover{
     border: 3px,solid,#c691e6;
     box-shadow:3px 2px 15px #c691e6;
 }
 
-.search>input{
+.searchBar>input{
     font-size: medium;
     margin: 8px 17px;
-    width: 73vh;
+    width: 69vh;
     border: none;
     outline: none;
 }
+#submit{
+    background-color: #eee;
+    border-radius: 50px;
+    padding: 12px;
+}
+#submit:hover{
+    border: 3px,solid,#c691e6;
+    box-shadow:3px 2px 15px #c691e6;
+}
+i{
+    color: #c691e6;
+}
+.response{
+    max-width: 80vw;
+    max-height: 50vh;
+}
+
 .links {
     color: #eee;
     transition: 0.5s;
