@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="arthaGpt.css" />
     <link href="https://fonts.cdnfonts.com/css/samarkan" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="loader.css">
     <style>@import url('https://fonts.cdnfonts.com/css/samarkan');</style>
     <title>Document</title>
   </head>
@@ -27,15 +28,19 @@
       <div class ="searchBar">
           <input type="text" name="" id="question" placeholder="Type your question">
       </div>
-      <div id="submit">
+      <button id="submit" >
       <i class="fa-solid fa-arrow-up fa-lg" ></i>
-    </div>
+      </button>
     </div>
       <div class="response">
       </div>
     </main>
     <div class="loader">
-      
+      <div class="dot-loader">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="arthaGpt.js"></script>
