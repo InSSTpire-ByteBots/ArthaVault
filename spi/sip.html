@@ -1,86 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="sip.css" />
-    <title>Document</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Calculator</title>
+    <link rel="stylesheet" href="sip.css">
+</head>
+<body>
     <header>
-      <figure>
-        <img src="../images/logo.png" alt="ArthVault" />
-      </figure>
-      <nav>
-        <ul>
-          <li><a href="#" class="links">Home</a></li>
-          <li><a href="#" class="links">About us</a></li>
-          <li><a href="#" class="links">Contact us</a></li>
-        </ul>
-      </nav>
+        <img src="../images/logo.png" alt="ArthVault Logo">
+        <nav>
+            <ul>
+                <li><a href="#" class="links">Home</a></li>
+                <li><a href="#" class="links">About us</a></li>
+                <li><a href="#" class="links">Contact us</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
         <div id="container">
-            <div id="buttons">
-              <button class="but" onclick="ShowSIP()">SIP</button>
-              <button class="but" onclick="ShowLumpSum()">SUM</button>
+            <div id="calculator-type">
+                <button onclick="ShowSIP()">SIP</button>
+                <button onclick="ShowLumpSum()">Lumpsum</button>
             </div>
-            <div id="lump">
-          <label for="initialInvestment">Initial Investment:</label>
-          <input
-            type="number"
-            id="initialInvestment"
-            placeholder="Enter initial investment"
-          />
-          <br />
-          <label for="expectedReturn">Expected Annual Return (%):</label>
-          <input
-            type="number"
-            id="expectedReturn"
-            placeholder="Enter expected return"
-          />
-          <br />
-          <label for="investmentPeriod">Investment Period (Years):</label>
-          <input
-            type="number"
-            id="investmentPeriod"
-            placeholder="Enter investment period"
-          />
-          <br />
-          <button class="cal" onclick="calculateLumpSum()">Calculate</button>
-          <p id="inv"></p>
-          <p id="ret"></p>
-          <p id="result"></p>
+
+            <div id="lump" class="calculator-section">
+                <h2>Lumpsum Investment</h2>
+                <label for="initialInvestment">Initial Investment:</label>
+                <input type="number" id="initialInvestment" placeholder="Enter amount">
+
+                <label for="expectedReturn">Expected Annual Return (%):</label>
+                <input type="number" id="expectedReturn" placeholder="Enter percentage">
+
+                <label for="investmentPeriod">Investment Period (Years):</label>
+                <input type="number" id="investmentPeriod" placeholder="Enter years">
+
+                <button onclick="calculateLumpSum()" class="cal">Calculate</button>
+
+                <div id="lumpsum-results">
+                    <p id="inv"></p>
+                    <p id="ret"></p>
+                    <p id="result"></p>
+                </div>
+            </div>
+
+            <div id="SIP" class="calculator-section">
+                <h2>Systematic Investment Plan (SIP)</h2>
+                <label for="monthlyInvest">Monthly Investment:</label>
+                <input type="number" id="monthlyInvest" placeholder="Enter monthly amount">
+
+                <label for="expected">Expected Annual Return (%):</label>
+                <input type="number" id="expected" placeholder="Enter percentage">
+
+                <label for="Period">Investment Period (Years):</label>
+                <input type="number" id="Period" placeholder="Enter years">
+
+                <button onclick="calculateSIP()" class="cal">Calculate</button>
+
+                <div id="sip-results">
+                    <p id="x"></p>
+                    <p id="y"></p>
+                    <p id="z"></p>
+                </div>
+            </div>
         </div>
-        <div id="SIP">
-          <label for="monthlyInvest">Monthly Investment:</label>
-          <input
-            type="number"
-            id="monthlyInvest"
-            placeholder="Enter monthly investment"
-          />
-          <br />
-          <label for="expected">Expected Annual Return (%):</label>
-          <input
-            type="number"
-            id="expected"
-            placeholder="Enter expected return"
-          />
-          <br />
-          <label for="Period">Investment Period (Years):</label>
-          <input
-            type="number"
-            id="Period"
-            placeholder="Enter investment period"
-          />
-          <br />
-          <button class="cal" onclick="calculateSIP()">Calculate</button>
-          <p id="x"></p>
-          <p id="y"></p>
-          <p id="z"></p>
-        </div>
-      </div>
     </main>
+
     <script src="sip.js"></script>
-  </body>
+</body>
 </html>

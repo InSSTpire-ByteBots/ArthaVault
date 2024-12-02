@@ -75,6 +75,7 @@ header nav ul {
   font-size: 1.5rem;
   display: flex;
   gap: 300px;
+  padding: 30px 0;
 }
 .total,
 .left {
@@ -133,6 +134,7 @@ header nav ul {
   font-weight: 700;
   background-color: rgba(74, 66, 94, 0.3);
   border: 1px solid #afaeae55;
+  color: white;
 }
 .pie {
   width: 35%;
