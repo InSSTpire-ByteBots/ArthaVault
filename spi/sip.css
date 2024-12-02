@@ -122,7 +122,7 @@ button.cal {
   border-radius: 20px;
   background-color: var(--input-background);
   color: var(--text-light);
-  border: none;
+  border: 1px solid grey;
 }
 
 #lump {
