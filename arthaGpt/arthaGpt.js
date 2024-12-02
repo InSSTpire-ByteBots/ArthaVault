@@ -20,7 +20,7 @@ async function getResponse(event){
         {
             parts: [
             {
-                text: question.value
+                text: question.value + "Actually I have used gemini api in my website named ArthaVault and the question asked above is given by the user, my website is related to finance management (budget management) which manages finance of the user, give them investment and savings tips, so if the question is not related to these topics, then plz reply with 'I can only help you with your finance related questions'."
             }
             ]
         }
