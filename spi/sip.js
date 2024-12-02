@@ -1,50 +1,60 @@
+// Utility function to format currency
+function formatCurrency(amount) {
+  return `₹${amount.toFixed(2)}`;
+}
+
+// Calculate SIP (Systematic Investment Plan)
 function calculateSIP() {
+  const monthlyInvestment = parseFloat(document.getElementById("monthlyInvest").value);
+  const expectedAnnualReturn = parseFloat(document.getElementById("expected").value) / 100;
+  const investmentPeriod = parseInt(document.getElementById("Period").value);
   
-     const monthlyInvestment = parseFloat(document.getElementById("monthlyInvest").value);
-     const expectedReturn = parseFloat(document.getElementById("expected").value) / 100;
-     const investmentPeriod = parseInt(document.getElementById("Period").value);
-   
-     
-     let futureValue = 0;
-     for (let i = 0; i < investmentPeriod * 12; i++) {
-       futureValue = (futureValue + monthlyInvestment) * (1 + expectedReturn / 12);
-     }
-   
-     let investedAmt = monthlyInvestment * 12 * investmentPeriod;
-     let estReturns = futureValue - investedAmt;
-   
-     document.getElementById("x").textContent = "Invested Amount for " + investmentPeriod + " years: ₹" + investedAmt.toFixed(2);
-     document.getElementById("y").textContent = "Est. Returns " + ": ₹" + estReturns.toFixed(2);
-     
-   
-     
-     document.getElementById("z").textContent = "Your estimated corpus after " + investmentPeriod + " years: ₹ " + futureValue.toFixed(2);
-     }
-   
-     function calculateLumpSum() {
+  const monthlyRate = expectedAnnualReturn / 12;
+  const totalMonths = investmentPeriod * 12;
   
-          const initialInvestment = parseFloat(document.getElementById("initialInvestment").value);
-          const expectedReturn = parseFloat(document.getElementById("expectedReturn").value) / 100;
-          const investmentPeriod = parseInt(document.getElementById("investmentPeriod").value);
-        
-          
-          const futureValue = initialInvestment * Math.pow((1 + expectedReturn), investmentPeriod);
-        
-          let investedAmt = initialInvestment;
-          let estReturns = futureValue - investedAmt;
-        
-          document.getElementById("inv").textContent = "Invested Amount for " + investmentPeriod + " years: ₹" + investedAmt.toFixed(2);
-          document.getElementById("ret").textContent = "Est. Returns " + ": ₹ " + estReturns.toFixed(2);
-        
-          
-          document.getElementById("result").textContent = "Your estimated corpus after " + investmentPeriod + " years: ₹ " + futureValue.toFixed(2);
-        }
-        
-       function ShowSIP(){
-           document.getElementById("lump").style.display = "none";
-           document.getElementById("SIP").style.display = "block";
-       }
-       function ShowLumpSum(){
-           document.getElementById("SIP").style.display = "none";
-           document.getElementById("lump").style.display = "block";
-       }
+  // Calculate future value using SIP formula
+  const futureValue = monthlyInvestment * 
+      (Math.pow(1 + monthlyRate, totalMonths) - 1) / 
+      monthlyRate * 
+      (1 + monthlyRate);
+  
+  const totalInvestedAmount = monthlyInvestment * totalMonths;
+  const estimatedReturns = futureValue - totalInvestedAmount;
+
+  // Display results
+  document.getElementById("x").textContent = 
+      `Invested Amount for ${investmentPeriod} years: ${formatCurrency(totalInvestedAmount)}`;
+  document.getElementById("y").textContent = 
+      `Est. Returns: ${formatCurrency(estimatedReturns)}`;
+  document.getElementById("z").textContent = 
+      `Your estimated corpus after ${investmentPeriod} years: ${formatCurrency(futureValue)}`;
+}
+
+// Calculate Lumpsum Investment
+function calculateLumpSum() {
+  const initialInvestment = parseFloat(document.getElementById("initialInvestment").value);
+  const expectedAnnualReturn = parseFloat(document.getElementById("expectedReturn").value) / 100;
+  const investmentPeriod = parseInt(document.getElementById("investmentPeriod").value);
+  
+  const futureValue = initialInvestment * Math.pow((1 + expectedAnnualReturn), investmentPeriod);
+  const estimatedReturns = futureValue - initialInvestment;
+
+  // Display results
+  document.getElementById("inv").textContent = 
+      `Invested Amount for ${investmentPeriod} years: ${formatCurrency(initialInvestment)}`;
+  document.getElementById("ret").textContent = 
+      `Est. Returns: ${formatCurrency(estimatedReturns)}`;
+  document.getElementById("result").textContent = 
+      `Your estimated corpus after ${investmentPeriod} years: ${formatCurrency(futureValue)}`;
+}
+
+// Toggle between SIP and Lumpsum calculators
+function ShowSIP() {
+  document.getElementById("lump").style.display = "none";
+  document.getElementById("SIP").style.display = "flex";
+}
+
+function ShowLumpSum() {
+  document.getElementById("SIP").style.display = "none";
+  document.getElementById("lump").style.display = "flex";
+}
