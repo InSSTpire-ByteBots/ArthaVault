@@ -58,3 +58,20 @@ function ShowLumpSum() {
   document.getElementById("SIP").style.display = "none";
   document.getElementById("lump").style.display = "flex";
 }
+
+let menu = document.querySelector("#menu-icon");
+let nav = document.querySelector(".guide");
+
+menu.onclick = () => {
+  menu.classList.toggle("bx-x");
+  nav.classList.toggle("active");
+};
+
+let navLinks = document.querySelectorAll(".guide a");
+
+navLinks.forEach(link => {
+  link.onclick = () => {
+    menu.classList.remove("bx-x");
+    nav.classList.remove("active");
+  };
+});
