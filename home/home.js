@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       labels: ['Food', 'Travel', 'Household', 'Health', 'Education', 'Others'],
       datasets: [{
         label: 'Colors Distribution',
-        data: [12, 19, 3, 5, 2, 20], // Data values
+        data: [12, 19, 3, 5, 2, 20], 
         backgroundColor: [
           'rgba(255, 99, 132, 0.6)',
           'rgba(54, 162, 235, 0.6)',
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }]
     };
     const config = {
-      type: 'pie', // Type of the chart
+      type: 'pie', 
       data: data
     };
 
@@ -60,3 +60,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+const signOut = document.getElementById('logout');
+
+signOut.addEventListener('click', async () => {
+  await auth.signOut();
+  window.location.href = "../index.html";
+  console.log('User signed out')
+});
+
+
+let menu = document.querySelector("#menu-icon");
+let nav = document.querySelector(".guide");
+
+menu.onclick = () => {
+  menu.classList.toggle("bx-x");
+  nav.classList.toggle("active");
+};
+
+let navLinks = document.querySelectorAll(".guide a");
+
+navLinks.forEach(link => {
+  link.onclick = () => {
+    menu.classList.remove("bx-x");
+    nav.classList.remove("active");
+  };
+});
+

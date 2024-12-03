@@ -1,5 +1,7 @@
 * {
   font-size: 1rem;
+  text-decoration: none;
+  list-style: none;
 }
 
 html,
@@ -42,6 +44,12 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+
+header nav {
+  display: flex;
+  gap: 30px;
+}
+
 header nav ul {
   display: flex;
   gap: 30px;
@@ -55,12 +63,47 @@ header nav ul {
   background-image: linear-gradient(to bottom, #eee1, transparent, #eee1);
   cursor: pointer;
   transition: 0.5s;
+  margin-right: 20px;
 }
 .btn:hover {
   background-color: #c691e6;
   color: #040018;
   box-shadow: 0 0 50px #c691e6;
   font-size: 1.2rem;
+}
+
+.guide {
+  display: none;
+  align-items: center;
+}
+
+.guide a {
+  display: block;
+  padding: 0;
+  margin: 0px 0px 25px 0px;
+  font-size: 1.7rem;
+  color: #eee;
+}
+
+.guide a:hover {
+  color: #c691e6;
+}
+
+.guide.active {
+  z-index: 10001;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  padding: 100px 50px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 100%;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(32px);
+  transition: all 0.6s ease;
+  left: 0;
 }
 
 .fin,
@@ -144,4 +187,16 @@ header nav ul {
   justify-content: center;
   align-self: center;
   margin-right: 10%;
+}
+
+.bx {
+  justify-items: center;
+  align-self: center;
+  font-size: 2rem;
+  transition: 0.5s;
+  z-index: 100001;
+}
+
+.bx:hover {
+  transform: scale(1.2);
 }
