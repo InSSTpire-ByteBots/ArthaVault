@@ -146,7 +146,7 @@ header nav ul {
 .info {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   gap: 20px;
   padding: 10px 20px;
   align-items: flex-start;
@@ -187,34 +187,6 @@ header nav ul {
   justify-content: center;
   align-self: center;
   margin-right: 10%;
-}
-
-#submitBtn {
-  all: unset;
-  border: 1px solid #afaeae55;
-  padding: 10px 20px;
-  border-radius: 20px;
-  background-image: linear-gradient(to bottom, #eee1, transparent, #eee1);
-  cursor: pointer;
-  transition: 0.5s;
-  margin-left: 90px;
-  margin-top: 20px ;
-}
-
-#submitBtn:hover {
-  background-color: #c691e6;
-  color: #040018;
-  box-shadow: 0 0 50px #c691e6;
-  font-size: 1.2rem;
-}
-
-input{
-  background: white;
-  border-radius: 50px; 
-  padding-left: 15px; 
-  border: 2px,solid,#c691e6;
-  padding: top 0px; ;
-  margin: 5px;
 }
 
 .bx {
